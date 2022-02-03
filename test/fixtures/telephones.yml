@@ -2,10 +2,10 @@
 
 one:
   number: MyString
-  type: 
+  kind: 
   main: false
 
 two:
   number: MyString
-  type: 
+  kind: 
   main: false
