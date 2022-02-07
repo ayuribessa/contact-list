@@ -13,7 +13,9 @@ RSpec.describe User, type: :model do
   end
     
   it "does not create if the user name is already taken" do
-    User.create!(name:"Ayuri Bessa",birthday:"09/03/1995", bio:"my alt bio!")
-    expect(User.count).to eq 1
+    user = User.create(name:"Ayuri Bessa",birthday:"09/03/1994", bio:"my bio!")
+    user = User.create(name:"Ayuri Bessa",birthday:"09/03/1995", bio:"my alt bio!")
+    user.valid? 
+    expect(user.errors[:name]).to include('has already been taken')
   end
 end
