@@ -5,3 +5,8 @@ one:
   name: Fulano
   birthday: 2022-02-02
   bio: Some Bio
+two:
+  id: 2
+  name: Sicrano
+  birthday: 2022-02-02
+  bio: Another bio

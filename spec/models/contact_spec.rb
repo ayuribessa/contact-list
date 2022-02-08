@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Contact, type: :model do
-  fixtures :contacts
+  fixtures :users, :contacts
   it "is valid with user_id, name and birthday " do
-    contact = contacts(:one)
-    expect(contact).to be_valid
+    Contact.create(name: "Beltrano", birthday: "09/02/1994", user_id: 1)
+    expect(Contact.count).to eq 2
   end
   
   it "is not valid without a name" do
