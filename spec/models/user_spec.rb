@@ -2,7 +2,9 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   it "is not valid without name" do
-    user = User.create(name: nil,birthday:"09/03/1994", bio:"my bio!")
+    fixtures :contacts
+    # user = User.create(name: nil,birthday:"09/03/1994", bio:"my bio!")
+    user = users(:one)
     user.valid?   
     expect(user.errors[:name]).to include("can't be blank") 
   end

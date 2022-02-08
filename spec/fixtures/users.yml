@@ -1,11 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  id: 1
+  name: Fulano
   birthday: 2022-02-02
-  bio: MyText
+  bio: Some Bio
 
 two:
-  name: MyString
-  birthday: 2022-02-02
-  bio: MyText
+  id: 2
+  name: Beltrano
+  birthday: 2022-03-02
+  bio: Another Bio
