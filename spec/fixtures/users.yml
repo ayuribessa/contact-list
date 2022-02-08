@@ -5,9 +5,3 @@ one:
   name: Fulano
   birthday: 2022-02-02
   bio: Some Bio
-
-two:
-  id: 2
-  name: Beltrano
-  birthday: 2022-03-02
-  bio: Another Bio
