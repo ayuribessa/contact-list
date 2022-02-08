@@ -1,8 +1,8 @@
 class Telephone < ApplicationRecord
   belongs_to :contact
   validates :number, presence: true, uniqueness: {scope: :contact_id}
-  VALID_TYPES = ['home', 'work', 'other']
-  validates :kind, presence: true, inclusion: { in: VALID_TYPES}
+  enum :valid_types,  [:home, :work, :other]
+  validates :kind, presence: true, inclusion: { in: valid_types }
   validates :main, presence: true, inclusion: {in: [true, false]}, uniqueness: {scope: :contact_id, conditions: -> {where(main: true)}}
 
 end
