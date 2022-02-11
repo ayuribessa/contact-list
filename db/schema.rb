@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2022_02_02_142636) do
 
   create_table "contacts", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.date "birthday"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(version: 2022_02_02_142636) do
   end
 
   create_table "telephones", force: :cascade do |t|
-    t.string "number"
-    t.string "type"
-    t.boolean "main"
+    t.string "number", null: false
+    t.string "kind", null: false
+    t.boolean "main", null: false
     t.integer "contact_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2022_02_02_142636) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.date "birthday"
     t.text "bio"
     t.datetime "created_at", precision: 6, null: false
