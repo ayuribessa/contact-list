@@ -1,2 +1,16 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h2> <%= " Dados do usuário : #{@user.name}" %> </h2>
+<h3>Bio</h3>
+<p> <%= "#{@user.bio}	" %> </p>
+<h3>Birthday<h3>
+<p> <%= "#{@user.birthday} "	%> </p>
+
+
+<h3>Contatos</h3>
+<% @contacts.each do |i,contact| %> 
+  <p> <%= contact.name %> </p>
+  <p> <%= contact.birthday %> </p>
+<% end %> 
+<h3>Número total de contatos</h3>
+<p> <%= @contacts_count %> </p>
+<h3>Número total de telefones</h3>
+<p> <%= @total_phones %> </p>

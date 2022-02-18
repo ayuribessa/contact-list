@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
   get 'users' => 'users#index'
-  get 'users/show'
-  get 'users/new'
-  get 'users/create'
-  get 'users/edit'
-  get 'users/update'
-  get 'users/destroy'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+  get 'show' => 'users#show'
+  get 'new' => 'users#new'
+  get 'create' => 'users#create'
+  get 'edit' => 'users#edit'
+  get 'update' => 'users#update'
+  get 'destroy' => 'users#destroy'
+  get 'user/:id' => 'users#show', as: :user
   # Defines the root path route ("/")
-  # root "articles#index"
+  root 'users#index'
 end
